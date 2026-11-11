@@ -1,0 +1,188 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f5f9;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 30px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: indigo;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.menu a:hover {
+    color: indigo;
+    text-decoration: underline;
+}
+
+/* Content dan Sidebar */
+.halaman {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+}
+
+.konten {
+    flex: 1;
+    min-width: 0;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.sidebar {
+    width: 220px;
+    flex-shrink: 0;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.sidebar ul {
+    padding-left: 20px;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.sidebar a {
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: indigo;
+    background-color: #eeeaff;
+}
+
+/* Tabel */
+.tabel-data {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.tabel-data caption {
+    font-weight: bold;
+    padding: 12px;
+}
+
+.tabel-data th,
+.tabel-data td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+/* Mengatur lebar kolom */
+.tabel-data th:nth-child(1),
+.tabel-data td:nth-child(1) {
+    width: 25%;
+}
+
+.tabel-data th:nth-child(2),
+.tabel-data td:nth-child(2) {
+    width: 25%;
+}
+
+.tabel-data th:nth-child(3),
+.tabel-data td:nth-child(3) {
+    width: 22%;
+}
+
+.tabel-data th:nth-child(4),
+.tabel-data td:nth-child(4) {
+    width: 15%;
+}
+
+.tabel-data th:nth-child(5),
+.tabel-data td:nth-child(5) {
+    width: 13%;
+}
+
+.tabel-data thead {
+    background-color: #eeeef5;
+}
+
+.tabel-data tbody tr:hover {
+    background-color: #eeeaff;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .halaman {
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .konten {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .tabel-data {
+        font-size: 12px;
+    }
+
+    .tabel-data th,
+    .tabel-data td {
+        padding: 6px;
+    }
+
+    /* Menyembunyikan kolom Penulis */
+    .tabel-data th:nth-child(2),
+    .tabel-data td:nth-child(2) {
+        display: none;
+    }
+}
